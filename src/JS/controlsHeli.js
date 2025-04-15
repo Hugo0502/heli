@@ -58,10 +58,10 @@ export function updateHeli(heliBody){
 
     const force = new Vec3(0, 0, 0);
 
-    if (input.forward) force.z += 1.5;
-    if (input.backward) force.z -= 1.5;
-    if (input.left) force.x += 1.5;
-    if (input.right) force.x -= 1.5;
+    if (input.forward) force.z += 2;
+    if (input.backward) force.z -= 2;
+    if (input.left) force.x += 2;
+    if (input.right) force.x -= 2;
     if (input.up) force.y += 1;
     if (input.down) force.y -= 1;
 
@@ -70,10 +70,10 @@ export function updateHeli(heliBody){
     }
 
     if (input.rotateLeft) {
-        heliBody.angularVelocity.y += 0.01;
+        heliBody.angularVelocity.y += 0.02;
     }
     if (input.rotateRight) {
-        heliBody.angularVelocity.y -= 0.01;
+        heliBody.angularVelocity.y -= 0.02;
     }
 
 }
